@@ -125,7 +125,7 @@ class Milvus:
         self._kw = kwargs
         self._hooks = collections.defaultdict()
 
-        self._deploy_mode = DeployMode.Distributed
+        self._deploy_mode = DeployMode.StandAlone
 
     @check_connect
     def _wait_for_healthy(self, timeout=30, retry=10):
