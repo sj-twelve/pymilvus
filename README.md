@@ -30,6 +30,7 @@ Install sj's
 
 ```shell
 $ pip install git+https://github.com/sj-twelve/pymilvus
+```
 
 You can install PyMilvus via `pip` or `pip3` for Python 3.6+:
 
