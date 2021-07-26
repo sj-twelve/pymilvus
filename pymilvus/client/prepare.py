@@ -572,7 +572,7 @@ class Prepare:
 
         nq = len(data)
         max_nq_per_batch = nq
-        if kwargs.get("_deploy_mode", DeployMode.Distributed):
+        if kwargs.get("_deploy_mode", DeployMode.Distributed) == DeployMode.Distributed:
             factor = 10
             max_nq_per_batch = (5 * 1024 * 1024) / (bytes_per_vector * limit * factor)
             max_nq_per_batch = int(max_nq_per_batch)
