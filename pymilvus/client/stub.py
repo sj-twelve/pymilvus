@@ -356,7 +356,7 @@ class Milvus:
         """
         check_pass_param(collection_name=collection_name)
         with self._connection() as handler:
-            return handler.release_collection(db_name="", collection_name, timeout, **kwargs)
+            return handler.release_collection("", collection_name, timeout, **kwargs)
 
     @retry_on_rpc_failure(retry_times=10, wait=1)
     @check_connect
