@@ -114,7 +114,7 @@ class Milvus:
 
         if handler != "GRPC":
             raise NotImplementedError("only grpc handler is supported now!")
-        kwargs.set("sync", False)
+        kwargs["sync"] = False
         _uri = kwargs.get('uri', None)
         self._pool_type = pool
         self._pool_uri = _set_uri(host, port, _uri, self._handler)
